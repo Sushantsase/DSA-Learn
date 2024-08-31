@@ -6,8 +6,8 @@ public class reverseNumber {
     public static void reverse(int number) {
         int rev = 0;
         while (number != 0) {  //565656
-            rev = rev * 10 + number % 10; // 0+6
-            number = number / 10;
+            rev = rev * 10 + number % 10; // rev = number%10;
+            number = number / 10;        //rev =rev*10+
         }
         System.out.println(rev);
     }
