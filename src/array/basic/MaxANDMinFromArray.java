@@ -19,12 +19,10 @@ public class MaxANDMinFromArray {
     }
 
     public static int maxElement2(int[] arr) {
-        if (arr == null && arr.length == 0) return 0;
+        if (arr == null && arr.length == 0) return Integer.MIN_VALUE;
         int max = -(int)1e9;
         for (int ele:arr) {
-            if (ele>max) {
-                max =ele;
-            }
+     max = Math.max(max,ele);
         }
 
         return max;
@@ -45,11 +43,9 @@ public class MaxANDMinFromArray {
 
     public static int minElement2(int[] arr){
         int min = arr[0];
-        if(arr.length == 0 && arr ==null) return 0;
+        if(arr.length == 0 && arr ==null) return Integer.MAX_VALUE;
         for(int ele:arr){
-            if(ele<min){
-                min = ele;
-            }
+            min = Math.min(min,ele);
         }
         return min;
     }
@@ -96,15 +92,15 @@ public class MaxANDMinFromArray {
 //        display2(arr);
 //        System.out.println(arr);
 
-       //int[] arr = new int[]{41, 56, 45, 7, 96, 3};
-       // int[] arr = new int[0];
-//        int maxNumber = maxElement(arr);
-//        int maxNumber = maxElement2(arr);
-//        System.out.println(maxNumber);
+       int[] arrw = new int[]{41, 56, 45, 7, 96, 3};
+        //int[] arr = new int[0];
+       // int maxNumberw = maxElement(arrw);
+        int maxNumberw = maxElement2(arrw);
+        System.out.println(maxNumberw);
 
-        //int minNumber = minElement2(arr);
-//        int maxNumber = maxElement2(arr);
-        //System.out.println(minNumber);
+//        int minNumberw = minElement2(arrw);
+//        int maxNumberww = maxElement2(arrw);
+//        System.out.println(minNumberw);
 
 //Using Streams
 
