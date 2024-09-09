@@ -5,7 +5,7 @@ public class RemoveDuplicateLetter {
         String ans = "";
         for (int i = 0; i < s.length(); i++) {
             int j = 0;
-            for (j = 0; j < i; j++) {
+            for ( j = 0; j < i; j++) {
                 if (s.charAt(i) == s.charAt(j)) //same character found
                 {
                     break;
