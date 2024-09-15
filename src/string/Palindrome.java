@@ -16,11 +16,12 @@ public class Palindrome {
         return true;
     }
 
+
     public static void printAllPalindrome(String str) {  // cutting substring
         for (int i = 0; i < str.length(); i++) {
-            for(int j=i;j< str.length();j++){
-                if(isPalindrome(str,i,j-1)){
-                    String s = str.substring(i,j+1);
+            for (int j = i; j < str.length(); j++) {
+                if (isPalindrome(str, i, j)) {
+                    String s = str.substring(i, j + 1);
                     System.out.println(s);
                 }
             }
@@ -28,13 +29,38 @@ public class Palindrome {
         }
     }
 
-    public static void main(String[] args) {
-        Scanner scn = new Scanner(System.in);
-        String str = scn.next();
-        printAllPalindrome(str);
-        //System.out.println(str);
+    public static void printLongestPalindrone(String str) {  // cutting substring
+        String longest = "";
+        int max = 0;
 
-//        String str = "abcdergff";
+        for (int i = 0; i < str.length(); i++) {
+            for (int j = i; j < str.length(); j++) {
+                if (isPalindrome(str, i, j)) {
+                    String s = str.substring(i, j + 1);
+
+                    if (s.length() > max) {
+                        longest = s;
+                        max = longest.length();
+                    }
+
+                }
+            }
+
+        }
+        System.out.println("Longest Palindrone is " + longest);
+
+    }
+
+
+    public static void main(String[] args) {
+//        Scanner scn = new Scanner(System.in);
+//        String str = scn.next();
+//        printAllPalindrome(str);
+//        //System.out.println(str);
+
+        String str = "abba";
+        printAllPalindrome(str);
+        //  printLongestPalindrone(str);
 //        System.out.println(str);
 //        char ch = str.charAt(4);
 //        System.out.println(str.length());

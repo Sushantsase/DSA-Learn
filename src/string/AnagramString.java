@@ -21,19 +21,19 @@ public class AnagramString {
         System.out.println(sh);
         Arrays.sort(th);
         System.out.println(th);
-        if(sh==th){
-            System.out.println("hello");
-        }
-        else{
-            System.out.println("sdf");
-        }
-        System.out.println(sh.equals(th));
-        return sh.equals(th);
+//        if(sh==th){
+//            System.out.println("hello");
+//        }
+//        else{
+//            System.out.println("sdf");
+//        }
+       //// System.out.println(sh.equals(th));
+        return Arrays.equals(sh,th);
     }
 
     public static void main(String[] args) {
-        String s = "anagram";
-        String b = "nagaram";
+        String s = "abcdefg";
+        String b = "gfdabce";
         System.out.println(isAnagram(s, b));
     }
 }
