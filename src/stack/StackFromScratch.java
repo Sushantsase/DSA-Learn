@@ -78,6 +78,7 @@ public class StackFromScratch {
         n.push("ssf");   n.push("sa");   n.push("ssasss");
         System.out.println(n.size());
         System.out.println(n);
+
         System.out.println(n.search("sgga"));
 //        st.push(1);
 //        st.push(2);

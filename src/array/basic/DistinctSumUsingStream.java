@@ -11,14 +11,19 @@ public class DistinctSumUsingStream {
                 .distinct()
                 .forEach(x -> System.out.print(x+" "));
                 //.forEach(System.out::println);
-
+        
         //sum
         System.out.println();
-        Integer sum = in.stream()
-                .distinct()
-                .reduce(0,(a,b) -> a+b);
-        System.out.println(sum);
-        System.out.println();
+//        Integer sum11 = in.stream()
+//                .distinct()
+//                .reduce(0,(a,b) -> a+b);
+//        System.out.println(sum11);
+//        System.out.println();
+//        Integer sum = in.stream()
+//                        .distinct()
+//                                .reduce(0,Integer::sum);
+//        System.out.println(sum);
+//        System.out.println();
         Integer sum1 = in.stream()
                 .reduce(0,(a,b) -> a+b);
         System.out.println(sum1);
@@ -30,6 +35,7 @@ public class DistinctSumUsingStream {
 
         final Optional<Integer> max = in.stream()
                 .max(Comparator.naturalOrder());
+
         System.out.println(max.get());
 
         final Optional<Integer> min = in.stream()

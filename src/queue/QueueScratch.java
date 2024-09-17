@@ -5,19 +5,23 @@ class Queue {
     private int front;
     private int rear;
     private int capacity;
-    private int actualEleemntCount;
+    private int actualElementCount;
 
     public Queue(int size) {
         this.arr = new int[size];
         this.front = 0;
         this.rear = -1;
         this.capacity = size;
-        this.actualEleemntCount = 0;
+        this.actualElementCount = 0;
 
     }
 
     public boolean isQueueFull() {
-        return actualEleemntCount == capacity;
+        return actualElementCount == capacity;
+    }
+
+    public boolean isQueueEmpty() {
+        return actualElementCount == 0;
     }
 
     public void enqueue(int a) {
@@ -27,13 +31,10 @@ class Queue {
         }
         rear = (rear + 1) % capacity;
         arr[rear] = a;
-        actualEleemntCount++;
+        actualElementCount++;
 
     }
 
-    public boolean isQueueEmpty() {
-        return actualEleemntCount == 0;
-    }
 
     public int dequeue() {
         if (isQueueEmpty()) {
@@ -42,20 +43,21 @@ class Queue {
         }
         int x = arr[front];
         front = (front + 1) % capacity;
-        actualEleemntCount--;
+        actualElementCount--;
         return x;
     }
-    public int peek(){
-        if(isQueueEmpty()){
+
+    public int peek() {
+        if (isQueueEmpty()) {
             System.out.println("Empty");
         }
         return arr[front];
     }
 
-    public void displayQueue(){
-        for(int i=0;i<actualEleemntCount;i++){
-            int index = (front + i)% capacity;
-            System.out.print(arr[index]+" ");
+    public void displayQueue() {
+        for (int i = 0; i < actualElementCount; i++) {
+            int index = (front + i) % capacity;
+            System.out.print(arr[index] + " ");
 
         }
         System.out.println();
