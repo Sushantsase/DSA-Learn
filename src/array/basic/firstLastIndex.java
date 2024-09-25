@@ -55,7 +55,7 @@ public static void firstIndexLastIndeax(int[] arr, int data){
 }
     public static void main(String[] args) {
         int[] arr = new int[]{10, 20,25,30,30,30,30,30, 40, 50, 60, 70, 80, 90, 100};
-        int data = 300;
+        int data = 30;
         firstIndexLastIndeax(arr,data);
 //        int value = firstIndex(arr, data);
 //      int valuec = lastIndex(arr, data);

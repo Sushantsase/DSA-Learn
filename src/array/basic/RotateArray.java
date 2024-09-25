@@ -57,7 +57,7 @@ public class RotateArray {
 
     public static void main(String[] args) {
         int[] arr = new int[]{20, 40, 65, 4, 8, 3, 44, 10};
-        int place = -3;
+        int place = 3;
         print(arr);
         System.out.println("");
        // rotateArrayExtraArray(arr, place);

@@ -16,7 +16,7 @@ public class DigitNumber {
     }
 
     public static void main(String[] args) {
-        int n = 0;
+        int n = 12454520;
         int len = countNumber(n);
         System.out.println(len);
     }
