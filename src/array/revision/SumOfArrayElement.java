@@ -1,5 +1,7 @@
 package array.revision;
 
+import java.util.HashSet;
+
 public class SumOfArrayElement {
 
     public static void sumOfArrayElements(int[] a) {
@@ -69,6 +71,33 @@ public class SumOfArrayElement {
         displayArray(arr);
     }
 
+    public static void removeDuplicateFromArray(int[] arr) {
+        int count = 0;
+        HashSet<Integer> unique = new HashSet<>();
+        for (int i : arr) {
+            if (unique.add(i)) {
+                System.out.print(i + " ");
+                count++;
+            }
+        }
+        System.out.println("Count is : " + count);
+    }
+
+
+    public static int removeDuplicates(int[] nums) {
+        if (nums.length == 0) return 0;
+        int k = 0;
+
+        for (int i = 0; i < nums.length; i++) {
+            if (k == 0 || nums[i] != nums[k - 1]) {
+                nums[k] = nums[i];
+                System.out.print(nums[k] + " ");
+                k++;
+            }
+        }
+        return k;
+    }
+
     public static void displayArray(int[] arr) {
         for (int a : arr) {
             System.out.print(" " + a);
@@ -76,7 +105,7 @@ public class SumOfArrayElement {
     }
 
     public static void main(String[] args) {
-        int[] arr = {1, 5, 9, 7, 3, 6, 45, 8, 3};
+        int[] arr = {1, 5, 5, 7, 7, 3, 45, 5, 8, 9, 7, 3, 6, 45, 8, 3};
         int[] arr1 = {};
         sumOfArrayElements(arr);
         maxMin(arr);
@@ -86,6 +115,9 @@ public class SumOfArrayElement {
         System.out.println();
         System.out.println(isSort(arr));
         sortArray(arr);
-
+        System.out.println();
+        removeDuplicateFromArray(arr);
+        System.out.println("HELL");
+        System.out.println(removeDuplicates(arr));
     }
 }
