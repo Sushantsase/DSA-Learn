@@ -15,25 +15,26 @@ public class FindPower {
       return a* pow1(a,b-1);
     }
 
-    public static int powOptimal(int a, int b){
+    public static double powOptimal(double a, double b){
         if(b==0){
             return 1;
         }
-        return a* pow1(a,b-1);
+        return a* powOptimal(a,b-1);
     }
 
     public static void main(String[] args) {
-        int a=2, p = 8;
-       int ans = pow(a,p);
-        System.out.println(ans);
-
-        int ans1 = pow1(a,p);
-        System.out.println(ans1);
-
-        Random r = new Random();
-        int n = r.nextInt();
-        System.out.println("Random doubles: " +n);
-        int rr = (int)(Math.random()*52)                     ;
-        System.out.println("Random doubles: " + rr);
+        double a=2.00000, p = -2;
+        System.out.println( powOptimal(a,p));
+//       double ans = pow(a,p);
+//        System.out.println(ans);
+//
+//        int ans1 = pow1(a,p);
+//        System.out.println(ans1);
+//
+//        Random r = new Random();
+//        int n = r.nextInt();
+//        System.out.println("Random doubles: " +n);
+//        int rr = (int)(Math.random()*52)                     ;
+//        System.out.println("Random doubles: " + rr);
     }
 }
