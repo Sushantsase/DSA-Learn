@@ -19,6 +19,7 @@ public class AnagramString {
         char[] th = t.toCharArray();
         Arrays.sort(sh);
         System.out.println(sh);
+
         Arrays.sort(th);
         System.out.println(th);
 //        if(sh==th){

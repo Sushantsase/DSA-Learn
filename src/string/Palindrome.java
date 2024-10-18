@@ -48,6 +48,7 @@ public class Palindrome {
 
         }
         System.out.println("Longest Palindrone is " + longest);
+        System.out.println("Longest Palindrone is " + max);
 
     }
 
@@ -58,9 +59,9 @@ public class Palindrome {
 //        printAllPalindrome(str);
 //        //System.out.println(str);
 
-        String str = "abba";
-        printAllPalindrome(str);
-        //  printLongestPalindrone(str);
+        String str = "cbbd";
+        //printAllPalindrome(str);
+          printLongestPalindrone(str);
 //        System.out.println(str);
 //        char ch = str.charAt(4);
 //        System.out.println(str.length());

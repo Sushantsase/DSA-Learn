@@ -46,10 +46,10 @@ public class ReverseStringLC {
     public static void main(String[] args) {
         char[] s = {'h', 'e', 'l', 'l', 'o'};
         String b = "gfdabce";
-        reverseStringExtraString(b);
+       // reverseStringExtraString(b);
         reverseString(b);
-        reverseStringArray(s);
-        reverseStringStringBuilder(b);
+        //reverseStringArray(s);
+        //reverseStringStringBuilder(b);
 
     }
 }
